@@ -82,6 +82,7 @@ public class BannerActivity extends AppCompatActivity implements OnBannerListene
     private class MyLoader extends ImageLoader {
         @Override
         public void displayImage(Context context, Object path, ImageView imageView) {
+//            Glide.with(context).load((String) path).into(imageView);//路径path强转与否均可
             Glide.with(context).load((String) path).into(imageView);//路径path强转与否均可
         }
     }
