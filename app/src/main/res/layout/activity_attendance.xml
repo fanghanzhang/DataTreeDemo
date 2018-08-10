@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:background="@color/white"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:gravity="center_vertical"
+                android:text="2018年4月考勤记录"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/demin_9dp"
+                android:layout_marginLeft="@dimen/size_25dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="迟到："
+                        android:textColor="@color/attendance_red" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_chidao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5次"
+                        android:textColor="@color/attendance_red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="早退："
+                        android:textColor="@color/attendance_red" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_zaotui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="5次"
+                        android:textColor="@color/attendance_red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="旷工："
+                        android:textColor="@color/attendance_red" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_kuanggong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5次"
+                        android:textColor="@color/attendance_red" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/demin_9dp"
+                android:layout_marginLeft="@dimen/size_25dp"
+                android:layout_marginTop="@dimen/demin_9dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="事假：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_shijia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5次" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="病假：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_bingjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="5次" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="年假：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_nianjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5次" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/demin_9dp"
+                android:layout_marginLeft="@dimen/size_25dp"
+                android:layout_marginTop="@dimen/demin_9dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="出差：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_chuchai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5次" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="外出：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_waichu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="5次" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="补休：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_buxiu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5次" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/demin_9dp"
+                android:layout_marginLeft="@dimen/size_25dp"
+                android:layout_marginTop="@dimen/demin_9dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="法加：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_fajia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5次" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="婚假：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_hunjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="5次" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="加班：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_jiaban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5次" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/demin_9dp"
+                android:layout_marginLeft="@dimen/size_25dp"
+                android:layout_marginTop="@dimen/demin_9dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="丧假：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_shangjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5天" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="产假（陪产假）：" />
+
+                    <TextView
+                        android:id="@+id/tv_attendance_chanjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5天" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

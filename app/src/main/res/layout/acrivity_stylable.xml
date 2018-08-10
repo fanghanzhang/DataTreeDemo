@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:personattr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ironghui.datatree.view.PersonView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        personattr:name="@string/person_name"
+        personattr:weight ="fat"
+        personattr:sex="@string/app_name"
+        personattr:adult ="false"
+        personattr:textSize="@dimen/text_size"/>
+</LinearLayout>

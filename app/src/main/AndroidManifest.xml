@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ironghui.datatree">
+
+    <application
+        android:name="com.ironghui.datatree.activity.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".activity.MainActivity">
+
+        </activity>
+
+        <activity android:name=".activity.SecondActivity"></activity>
+        <activity android:name=".activity.ThirdActivity">
+
+        </activity>
+        <activity android:name=".activity.SharedPreferenceActivity">
+
+        </activity>
+        <activity android:name=".activity.GetSharedPreferenceActivity">
+
+        </activity>
+        <activity android:name=".activity.ByteArrayActivity"></activity>
+        <activity android:name=".activity.VolleyActivity"></activity>
+        <activity android:name=".activity.DrawViewActivity"></activity>
+        <activity android:name=".activity.LoadGlide"></activity>
+        <activity android:name=".activity.LoadGlide4">
+
+        </activity>
+        <activity android:name=".activity.ImessiveActivity"></activity>
+        <activity android:name=".activity.ListViewAvtivity"></activity>
+        <activity
+            android:name=".activity.VedioActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".activity.ValueAnimatorActivity"></activity>
+        <activity android:name=".activity.FIlePermission">
+
+        </activity>
+        <activity android:name=".activity.SqliteOpenActivity">
+
+        </activity>
+        <activity android:name=".activity.RxjavaTest">
+
+        </activity>
+        <activity android:name=".activity.ViewPagerActivity">
+
+        </activity>
+        <activity android:name=".activity.ConstraintLayoutActivity">
+
+        </activity>
+        <activity android:name=".activity.ButterknifeActivity">
+
+        </activity>
+        <activity android:name=".activity.CardViewActivity">
+
+        </activity>
+        <activity android:name=".activity.AttendanceActivity">
+
+        </activity>
+        <activity android:name=".activity.BaseActivity"></activity>
+        <activity android:name=".activity.ApproveProjectDetail">
+
+        </activity>
+        <activity android:name=".activity.HumanResoureDetailActivity"></activity>
+        <activity android:name=".activity.AdapterActivity">
+
+        </activity>
+        <activity android:name=".activity.AttendanceChangeActivity">
+
+        </activity>
+        <activity android:name=".activity.TestActivity">
+
+        </activity>
+        <activity android:name=".activity.ReturnInterfaceActivity">
+
+        </activity>
+        <activity android:name=".activity.mvp.LoginMvpActivity">
+
+        </activity>
+        <activity android:name=".activity.mvp.GrildActivity">
+
+        </activity>
+        <activity android:name=".activity.ConfirmationOfReceipts">
+
+        </activity>
+        <activity android:name=".activity.JsonToMapActivity">
+
+        </activity>
+        <activity android:name=".activity.StylableActivity">
+
+        </activity>
+        <activity android:name=".draelayout.DrawLayoutActivity">
+
+        </activity>
+        <activity android:name=".activity.helper.CreateDbActivity">
+
+        </activity>
+        <activity android:name=".activity.sqlite.SQLiteActivity">
+
+        </activity>
+        <activity android:name=".activity.pickview.PickViewActivity">
+
+        </activity>
+        <activity
+            android:name=".activity.citypick.CityPickActivity"
+            android:theme="@style/DefaultCityPickerTheme">
+
+        </activity>
+        <activity android:name=".activity.timeline.TimeLineActivity">
+
+        </activity>
+        <activity android:name=".activity.timelinevitical.TimeLineVitical">
+
+        </activity>
+        <activity android:name=".activity.recycleview.RecycleviewActivity">
+
+        </activity>
+        <activity android:name=".activity.WebViewActivity">
+
+        </activity>
+        <activity android:name=".activity.bannerviepager.BannerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />　　
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+</manifest>
