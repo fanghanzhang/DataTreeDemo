@@ -1,5 +1,6 @@
 package com.ironghui.datatree.activity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,19 +13,27 @@ import android.widget.ProgressBar;
 
 import com.ironghui.datatree.R;
 
+import io.vov.vitamio.LibsChecker;
+import io.vov.vitamio.MediaPlayer;
+import io.vov.vitamio.widget.MediaController;
+import io.vov.vitamio.widget.VideoView;
+
 public class WebViewActivity extends AppCompatActivity {
 
     private WebView webView;
     private ProgressBar mProgress;
+    private VideoView videoView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
-        initView();
+//        initView();
+        playVideo();
     }
 
     private void initView() {
+
         mProgress = (ProgressBar) findViewById(R.id.mProgress);
         webView = findViewById(R.id.webview);
         WebSettings settings = webView.getSettings();
@@ -55,7 +64,30 @@ public class WebViewActivity extends AppCompatActivity {
         };
 
     }
+    private void playVideo() {
 
+        videoView = (VideoView) findViewById(R.id.vidio_view);
+        Uri uri = Uri.parse("https://v.qq.com/x/cover/33bfp8mmgakf0gi.html");
+        videoView.setVideoURI(uri);
+
+        if (!LibsChecker.checkVitamioLibs(this)) {
+            return;
+        }
+        //videoView.setVideoPath(path);
+        videoView.setMediaController(new MediaController(this));
+        videoView.setVideoQuality(MediaPlayer.VIDEOQUALITY_HIGH);
+        videoView.requestFocus();
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                //设置快进的倍速
+                mediaPlayer.setPlaybackSpeed(1.0f);
+                //设置缓冲大小
+                mediaPlayer.setBufferSize(512 * 1024);
+            }
+        });
+        videoView.start();
+    }
     public class WebViewClient extends WebChromeClient {
         //进度变化监听
 
