@@ -120,14 +120,14 @@
 
         </activity>
         <activity android:name=".activity.WebViewActivity">
-
-        </activity>
-        <activity android:name=".activity.bannerviepager.BannerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activity.bannerviepager.BannerActivity">
+
         </activity>
     </application>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

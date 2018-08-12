@@ -3,11 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+    <ProgressBar
+        android:id="@+id/mProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <WebView
+        android:layout_below="@+id/tv_webview"
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></WebView>
+
     <TextView
         android:textSize="18sp"
         android:text="测试webviewtext"
