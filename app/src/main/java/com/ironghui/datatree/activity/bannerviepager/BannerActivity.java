@@ -37,7 +37,6 @@ public class BannerActivity extends AppCompatActivity implements OnBannerListene
         List list_path = new ArrayList<>();
         //放标题的集合
         List list_title = new ArrayList<>();
-
         list_path.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic21363tj30ci08ct96.jpg");
         list_path.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic259ohaj30ci08c74r.jpg");
         list_path.add("http://ww4.sinaimg.cn/large/006uZZy8jw1faic2b16zuj30ci08cwf4.jpg");
