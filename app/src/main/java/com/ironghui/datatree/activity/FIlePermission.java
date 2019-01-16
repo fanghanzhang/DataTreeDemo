@@ -31,7 +31,7 @@ import java.io.File;
  */
 
 public class FIlePermission extends AppCompatActivity {
-     int reqCode = 0;
+    int reqCode = 0;
     private ViewStub viewStub;
     private String url;
     private RequestQueue requestQueue;
@@ -43,13 +43,7 @@ public class FIlePermission extends AppCompatActivity {
         inflaterView();
         //动态添加权限
         addPermission();
-//        creatFile();
         url = BuildConfig.BASE_UR;//gradle中配置uri
-//        getBuildUri();
-        /*Intent intent =new Intent(this,MainActivity.class);
-        startActivity(intent);*/
-//        showDialog();
-//        showReceiver();//监听屏幕的显示
         getMD5String();
     }
 
@@ -105,25 +99,11 @@ public class FIlePermission extends AppCompatActivity {
         requestQueue.stop();
     }
 
-    private void showDialog() {
-        DeleteDialog dialog = new DeleteDialog(this, new DeleteDialog.DialogOnClickListener() {
-            @Override
-            public void deleteStatus(boolean delStatus) {
-                if (delStatus) {
-                    System.out.println("您已作出确定选择");
-                }
-            }
-        });
-        dialog.show();
-        dialog.setTitle("提示");
-        dialog.setMsg("您确定要退出程序吗?");
-        System.out.println("创建失败");
-    }
 
     private void addPermission() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
 
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, reqCode);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 0);
         }
     }
 

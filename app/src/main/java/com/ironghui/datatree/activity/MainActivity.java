@@ -43,12 +43,12 @@ public class MainActivity extends AppCompatActivity implements GetData, GetSecon
                 secondActivity.setOnCaptchaMatchCallback(new SecondActivity.OnCaptchaMatchCallback() {
                     @Override
                     public void matchSuccess(String swipeCaptchaView) {
-                        Toast.makeText(MainActivity.this, "onClick()", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "matchSuccessonClick()", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void matchFailed(String swipeCaptchaView) {
-                        Toast.makeText(MainActivity.this, "onClick()", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "matchSuccessonClick()", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
