@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#efefef"
+        android:orientation="vertical"
+        android:paddingTop="5px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10px">
+
+            <TextView
+                android:id="@+id/tv_business_manage_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="调休申请"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_business_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10px"
+            android:paddingLeft="10px">
+
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:src="@drawable/business_manage_user" />
+
+            <TextView
+                android:id="@+id/tv_business_staff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5px"
+                android:text="员工"
+                android:textColor="@color/text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_business_manage_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text="张三" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_business_manage_type"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="30px"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="调休申请"/>-->
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_business_start"
+                android:layout_width="match_parent"
+                android:layout_height="30px"
+                android:layout_marginTop="1px"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10px">
+
+                <ImageView
+                    android:layout_width="20px"
+                    android:layout_height="20px"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/business_manage_start" />
+
+                <TextView
+                    android:id="@+id/tv_business_staff1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5px"
+                    android:gravity="center_vertical"
+                    android:text="开始时间"
+                    android:textColor="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/tv_business_manage_starttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:gravity="center_vertical"
+                    android:text="2016-12-12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35px"
+                android:layout_below="@id/ll_business_start"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10px">
+
+                <ImageView
+                    android:layout_width="20px"
+                    android:layout_height="20px"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/business_manage_end" />
+
+                <TextView
+                    android:id="@+id/tv_business_staff2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5px"
+                    android:gravity="center_vertical"
+                    android:text="结束时间"
+                    android:textColor="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/tv_business_manage_endtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10px"
+                    android:gravity="center_vertical"
+                    android:text="2016-12-12" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cb_business_flag"
+                android:layout_width="25px"
+                android:layout_height="25px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10px"
+                android:button="@null"
+                android:clickable="false"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_repair_sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="10px"
+            android:paddingLeft="35px"
+            android:paddingTop="10px"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="补签类型"
+                    android:textColor="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/tv_sign_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="上班补签" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_certifier"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="证明人"
+                    android:textColor="@color/text_color" />
+
+                <TextView
+                    android:id="@+id/tv_certifier_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="冯博" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_business_info"
+            android:layout_marginBottom="5px"
+            android:layout_marginTop="1px"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="10px"
+            android:paddingLeft="10px"
+            android:paddingTop="10px">
+
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/business_manage_reason" />
+
+            <TextView
+                android:id="@+id/tv_business_staff3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5px"
+                android:gravity="center_vertical"
+                android:text="事由"
+                android:textColor="#474646" />
+
+            <TextView
+                android:id="@+id/tv_business_manage_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:text="XXXXXXXXXXXXXXX" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_business_manage_refuse"
+                    android:layout_width="50px"
+                    android:layout_height="35px"
+                    android:background="@drawable/line_shape"
+                    android:text="拒绝"
+                    android:textColor="#edc04f" />
+
+                <Button
+                    android:id="@+id/btn_business_manage_approve"
+                    android:layout_width="50px"
+                    android:layout_height="35px"
+                    android:layout_marginLeft="10px"
+                    android:background="@drawable/line_shape2"
+                    android:text="批准"
+                    android:textColor="#1b68b7" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/shipei_bottom" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center_horizontal"
+        android:src="@drawable/plus"
+        android:textAlignment="center" />
+</RelativeLayout>

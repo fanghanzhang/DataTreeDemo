@@ -2,12 +2,16 @@ package com.ironghui.datatree.gaodemap;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -19,12 +23,21 @@ import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
 import com.ironghui.datatree.R;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class GaodeActivity extends AppCompatActivity implements LocationSource, AMapLocationListener {
     @BindView(R.id.map)
     MapView map;
+    @BindView(R.id.btn_punch_clock)
+    Button btnPunchClock;
     private AMap aMap;
 
     @Override
@@ -102,7 +115,7 @@ public class GaodeActivity extends AppCompatActivity implements LocationSource, 
             mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);
 //            mLocationOption.setOnceLocationLatest(true);//首次定位
 //            //地图放大16倍
-//            aMap.moveCamera(CameraUpdateFactory.zoomTo(16));
+            aMap.moveCamera(CameraUpdateFactory.zoomTo(16));
             //设置定位参数
             mlocationClient.setLocationOption(mLocationOption);
             // 此方法为每隔固定时间会发起一次定位请求，为了减少电量消耗或网络流量消耗，
@@ -151,4 +164,49 @@ public class GaodeActivity extends AppCompatActivity implements LocationSource, 
 
     }
 
+    @OnClick(R.id.btn_punch_clock)
+    public void onViewClicked() {
+        aMap.getMapScreenShot(new AMap.OnMapScreenShotListener() {
+            @Override
+            public void onMapScreenShot(Bitmap bitmap) {
+
+            }
+
+            @Override
+            public void onMapScreenShot(Bitmap bitmap, int i) {
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+                if (null == bitmap) {
+                    return;
+                }
+                try {
+                    FileOutputStream fos = new FileOutputStream(Environment.getExternalStorageDirectory() + "/test_" + sdf.format(new Date()) + ".png");
+                    boolean b = bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+                    try {
+                        fos.flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        fos.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    StringBuffer buffer = new StringBuffer();
+                    if (b)
+                        buffer.append("截屏成功 ");
+                    else {
+                        buffer.append("截屏失败 ");
+                    }
+                    if (i != 0)
+                        buffer.append("地图渲染完成，截屏无网格");
+                    else {
+                        buffer.append("地图未渲染完成，截屏有网格");
+                    }
+                    Toast.makeText(GaodeActivity.this, buffer.toString(), Toast.LENGTH_SHORT).show();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
 }

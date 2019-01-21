@@ -4,6 +4,9 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
     defaultConfig {
+        ndk {
+            abiFilters "armeabi"
+        }
         applicationId "com.ironghui.datatree"
         minSdkVersion 15
         targetSdkVersion 26
@@ -63,6 +66,8 @@ dependencies {
     implementation 'com.youth.banner:banner:1.4.10'
     implementation files('libs/Sunflower.jar')
     implementation project(':vitamio')
-    implementation files('libs/AMap_Location_V3.3.0_20170118.jar')
-    implementation files('libs/Android_Map3D_SDK_V4.1.3_20161208.jar')
+    implementation files('src/main/jniLibs/AMap_Location_V3.3.0_20170118.jar')
+    implementation files('src/main/jniLibs/Android_Map3D_SDK_V4.1.3_20161208.jar')
+    api 'com.zhy:autolayout:1.4.3'//屏幕适配 将布局单位dp/dip改为px。
+    implementation 'com.yanzhenjie:sofia:1.0.5'//刘海屏适配
 }

@@ -17,7 +17,7 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements GetData, GetSecondData {
+public class MainActivity extends AppCompatActivity implements  GetSecondData {
 
     private TextView tv;
 
@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity implements GetData, GetSecon
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tv = (TextView) findViewById(R.id.tv);
-        GetDataUtils.setGetDate(this);
         GetDataUtils.setGetSecondData(this);
         System.out.println("测试流程");
         tv.setOnClickListener(new View.OnClickListener() {
@@ -70,17 +69,6 @@ public class MainActivity extends AppCompatActivity implements GetData, GetSecon
     @Override
     public void thirdMethord() {
         System.out.println("secondMethord()回调成功");
-    }
-
-
-    @Override
-    public void onEnd(String string) {
-        System.out.println(string);
-    }
-
-    @Override
-    public void onStartde(String abc) {
-        System.out.println(abc);
     }
 
 }

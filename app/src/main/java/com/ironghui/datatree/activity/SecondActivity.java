@@ -25,7 +25,7 @@ public class SecondActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setcond);
-        returnData();
+//        returnData();
         setEnd();
 //        returnSecondData();
 //        testHttpUrlConnection();
