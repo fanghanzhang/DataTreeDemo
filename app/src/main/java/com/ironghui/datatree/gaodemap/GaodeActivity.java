@@ -11,6 +11,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.amap.api.location.AMapLocation;
@@ -38,7 +39,10 @@ public class GaodeActivity extends AppCompatActivity implements LocationSource, 
     MapView map;
     @BindView(R.id.btn_punch_clock)
     Button btnPunchClock;
+    @BindView(R.id.imageview)
+    ImageView imageview;
     private AMap aMap;
+    private Bitmap bitmap1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,6 +62,10 @@ public class GaodeActivity extends AppCompatActivity implements LocationSource, 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
 
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
         }
     }
 
@@ -174,11 +182,13 @@ public class GaodeActivity extends AppCompatActivity implements LocationSource, 
 
             @Override
             public void onMapScreenShot(Bitmap bitmap, int i) {
+                imageview.setImageBitmap(bitmap);
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
                 if (null == bitmap) {
                     return;
                 }
                 try {
+
                     FileOutputStream fos = new FileOutputStream(Environment.getExternalStorageDirectory() + "/test_" + sdf.format(new Date()) + ".png");
                     boolean b = bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
                     try {
@@ -208,5 +218,6 @@ public class GaodeActivity extends AppCompatActivity implements LocationSource, 
                 }
             }
         });
+
     }
 }

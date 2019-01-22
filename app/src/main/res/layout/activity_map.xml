@@ -25,4 +25,10 @@
             android:text="打卡"
             android:textColor="#fdffff" />
     </RelativeLayout>
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="190dp" />
 </RelativeLayout>

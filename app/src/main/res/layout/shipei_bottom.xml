@@ -7,7 +7,7 @@
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="0.3dp"
-        android:background="#f2f2f2" />
+        android:background="#dedede" />
 
     <LinearLayout
         android:id="@+id/ll_bottom"
@@ -70,12 +70,12 @@
             android:layout_gravity="bottom">
 
             <ImageView
-                android:visibility="invisible"
                 android:id="@+id/dd5"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/plus" />
+                android:src="@drawable/home_page_select_icon"
+                android:visibility="invisible" />
 
             <TextView
                 android:layout_width="wrap_content"
