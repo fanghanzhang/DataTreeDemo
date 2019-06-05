@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:gravity="center_vertical"
+        android:text="多线程" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="150dp"
+        android:gravity="bottom"
+        android:text="多线程界面" />
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="350dp" />
+</android.support.constraint.ConstraintLayout>

@@ -9,7 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ironghui.datatree.R;
-import com.ironghui.datatree.interfacen.GetData;
 import com.ironghui.datatree.interfacen.GetSecondData;
 import com.ironghui.datatree.utils.GetDataUtils;
 
@@ -17,7 +16,7 @@ import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements  GetSecondData {
+public class MainActivity extends AppCompatActivity implements GetSecondData {
 
     private TextView tv;
 

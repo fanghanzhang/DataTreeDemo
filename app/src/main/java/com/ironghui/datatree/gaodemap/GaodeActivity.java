@@ -179,7 +179,6 @@ public class GaodeActivity extends AppCompatActivity implements LocationSource, 
             public void onMapScreenShot(Bitmap bitmap) {
 
             }
-
             @Override
             public void onMapScreenShot(Bitmap bitmap, int i) {
                 imageview.setImageBitmap(bitmap);
